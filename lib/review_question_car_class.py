@@ -14,15 +14,15 @@ volvo_lightning.make
 volvo_lightning.model
 # => "Lightning"
 
-yugo.drive
+yugo.drive()
 # => "VROOOOOOOOOOOOM!"
 
 Car.all
-# => [#<Car:0x00007fae28930f20>, #<Car:0x00007fae28923370>, #<Car:0x00007fae2891ae78>]
+# => [<__main__.Car object at 0x1049247c0>, <__main__.Car object at 0x1049247c8>, <__main__.Car object at 0x1049247d6>]
 
 # BONUS:
 
-Car.brake
+Car.brake()
 # => "SCREEEECH!"
 
 volvo_lightning = Car(make="Volvo", model="Lightning")
