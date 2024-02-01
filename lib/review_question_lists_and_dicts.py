@@ -62,7 +62,24 @@ pokemon = [
 
 
 # How would you get the url for Bulbasaur's ability?
+def get_bulbasaur_url():
+    for pokemonObjs in pokemon:
+        if pokemonObjs["name"] == 'bulbasaur':
+            return pokemon[0]['abilities'][0]['ability']['url']
+
+print(get_bulbasaur_url())
+
+#list comprehension
+pokemon_base = [pokemonObjs['abilities'][0]['ability']['url'] for pokemonObjs in pokemon if pokemonObjs['name'] == 'bulbasaur']
+print(pokemon_base[0])
+
 # How would you return the first pokemon with base experience over 40?
+def pokemon_base_40():
+    for pokemonObjs in pokemon:
+        if pokemonObjs["base_experience"] > 40:
+            return pokemonObjs['name']
+
+
 # How would you return ALL OF THE pokemon with base experience over 40? (Gotta catch em all)
 # How would you return an array of all of the pokemon's names?
 # How would you determine whether or not the pokemon array contained any pokemon with a weight greater than 60?
